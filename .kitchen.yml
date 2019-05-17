@@ -7,4 +7,23 @@ platforms:
 
 suites:
 # https://blog.raveland.org/post/postgresql_repmgr_pgbouncer_en/
-  - name: raveland
+  - name: node0
+    driver:
+      vm_hostname: "db0.local"
+      network: 
+        - ["private_network", {ip: "10.0.0.50"}]
+  - name: node1
+    driver:
+      vm_hostname: "db1.local"
+      network: 
+        - ["private_network", {ip: "10.0.0.51"}]
+  - name: node2
+    driver:
+      vm_hostname: "db2.local"
+      network: 
+        - ["private_network", {ip: "10.0.0.52"}]
+  - name: pgbouncer
+    driver:
+      vm_hostname: "bouncer.local"
+      network: 
+        - ["private_network", {ip: "10.0.0.53"}]
