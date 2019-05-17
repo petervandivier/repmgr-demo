@@ -1,0 +1,10 @@
+---
+driver:
+  name: vagrant
+
+platforms: 
+  - name: debian-9
+
+suites:
+# https://blog.raveland.org/post/postgresql_repmgr_pgbouncer_en/
+  - name: raveland
